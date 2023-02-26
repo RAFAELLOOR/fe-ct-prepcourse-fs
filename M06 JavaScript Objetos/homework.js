@@ -120,7 +120,7 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Tu código:
    var sum= 0;
    for (let i= 0; i<objetoUsuario.posts.length; i++)
-      sum+= objetoUsuario.posts.[i].likes;
+      sum+= objetoUsuario.posts[i].likes;
    return sum
 }
 
@@ -136,8 +136,9 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // Precio final ---> 8
    // Tu código:
    objetoProducto.calcularPrecioDescuento= function () {
-      return this.precio*this.porcentajeDeDescuento;
+      return this.precio-this.precio*this.porcentajeDeDescuento;
    }
+   return objetoProducto
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
